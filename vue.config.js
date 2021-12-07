@@ -9,7 +9,7 @@ function resolve(dir) {
 const name = defaultSettings.title || 'vue Element Admin' // page title
 
 // 配置访问端口
-const port = process.env.port || process.env.npm_config_port || 80 // dev port
+const port = process.env.port || process.env.npm_config_port || 9527 // dev port
 
 // All configuration item explanations can be find in https://cli.vuejs.org/config/
 module.exports = {
