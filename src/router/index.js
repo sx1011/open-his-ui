@@ -124,7 +124,7 @@ export const asyncRoutes = [
         component: () => import('@/views/error-page/404'),
         name: '/system/log_login',
         meta: {
-          title: '登陆日志管理',
+          title: '登录日志管理',
           icon: 'clipboard'
         }
       },

@@ -45,7 +45,7 @@
         </el-form-item>
       </el-tooltip>
 
-      <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">登陆</el-button>
+      <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">登录</el-button>
 
       <div style="position:relative">
         <div class="tips">
@@ -58,7 +58,7 @@
         </div>
 
         <el-button class="thirdparty-button" type="primary" @click="showDialog=true">
-          第三方登陆
+          第三方登录
         </el-button>
       </div>
     </el-form>
@@ -89,8 +89,8 @@ export default {
     }
     return {
       loginForm: {
-        username: 'admin',
-        password: '111111'
+        username: '13888001001',
+        password: '001001'
       },
       loginRules: {
         password: [{ required: true, trigger: 'blur', validator: validatePassword }]
@@ -143,13 +143,13 @@ export default {
         this.$refs.password.focus()
       })
     },
-    // 登陆
+    // 登录
     handleLogin() {
       // 验证，验证用户名和密码是否合法。前端验证
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           this.loading = true
-          // 调用登陆方法
+          // 调用登录方法
           this.$store.dispatch('user/login', this.loginForm)
             .then(() => {
               this.$router.push({ path: this.redirect || '/', query: this.otherQuery })

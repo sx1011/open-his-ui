@@ -1,18 +1,18 @@
 import request from '@/utils/request'
 
-// 登陆的后端接口配置
+// 登录的后端接口配置
 export function login(data) {
   return request({
-    url: '/vue-element-admin/user/login',
+    url: '/login/doLogin',
     method: 'post',
     data
   })
 }
 
-// 登陆成功之后得到用户信息接口配置
+// 登录成功之后得到用户信息接口配置
 export function getInfo(token) {
   return request({
-    url: '/vue-element-admin/user/info',
+    url: '/login/getInfo',
     method: 'get',
     params: { token }
   })
@@ -21,7 +21,7 @@ export function getInfo(token) {
 // 退出
 export function logout() {
   return request({
-    url: '/vue-element-admin/user/logout',
+    url: '/login/logout',
     method: 'post'
   })
 }
