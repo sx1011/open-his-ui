@@ -40,7 +40,8 @@ router.beforeEach(async(to, from, next) => {
           await store.dispatch('user/getInfo')
 
           // 构造动态路由
-          const accessRoutes = await store.dispatch('permission/generateRoutes', ['admin'])
+          // const accessRoutes = await store.dispatch('permission/generateRoutes', ['admin'])
+          const accessRoutes = await store.dispatch('menu/getMenus')
 
           // dynamically add accessible routes
           router.addRoutes(accessRoutes)

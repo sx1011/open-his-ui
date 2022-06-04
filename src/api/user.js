@@ -25,3 +25,10 @@ export function logout() {
     method: 'post'
   })
 }
+// 加载菜单信息
+export function getMenus() {
+  return request({
+    url: '/login/getMenus',
+    method: 'get'
+  })
+}
